@@ -33,3 +33,4 @@ jobs:
           path: "src/content"
           pattern: "*.sh"
           fail_on_error: "true"
+          shellcheck_flags: "--exclude=SC2148"
