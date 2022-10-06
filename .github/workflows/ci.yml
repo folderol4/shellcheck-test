@@ -32,3 +32,4 @@ jobs:
           reporter: github-pr-review
           path: "src/content"
           pattern: "*.sh"
+          fail_on_error: "true"
