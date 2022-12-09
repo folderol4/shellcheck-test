@@ -26,9 +26,11 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: shellcheck
-        uses: reviewdog/action-shellcheck@v1
+        uses: reviewdog/action-shellcheck@38e8d613b8ec493d8561572b11fab7d34bc9fe91
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           path: "src/content"
           pattern: "*.sh"
+          fail_on_error: "true"
+          shellcheck_flags: "--exclude=SC2148"
